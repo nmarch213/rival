@@ -19,16 +19,18 @@ export const meta: MetaFunction = () => ({
 
 export default function App() {
   return (
-    <html lang='en'>
+    <html lang='en' className='dark'>
       <head>
         <Meta />
         <Links />
       </head>
       <body>
-        <Outlet />
-        <ScrollRestoration />
-        <Scripts />
-        <LiveReload />
+        <div className='bg-white dark:bg-Background h-screen'>
+          <Outlet />
+          <ScrollRestoration />
+          <Scripts />
+          <LiveReload />
+        </div>
       </body>
     </html>
   );
