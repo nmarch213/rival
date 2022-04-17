@@ -7,6 +7,7 @@ import {
   Scripts,
   ScrollRestoration,
 } from '@remix-run/react';
+import { useEffect, useState } from 'react';
 import styles from './tailwind.css';
 
 export const links: LinksFunction = () => [{ rel: 'stylesheet', href: styles }];
@@ -18,8 +19,17 @@ export const meta: MetaFunction = () => ({
 });
 
 export default function App() {
+  const [mode, setMode] = useState('dark');
+
+  useEffect(() => {
+    if (localStorage.getItem('color-theme') === null) {
+      localStorage.setItem('color-theme', 'dark');
+      setMode(localStorage.getItem('color-theme') || 'light');
+    }
+  }, []);
+
   return (
-    <html lang='en' className='dark'>
+    <html lang='en' className={mode}>
       <head>
         <Meta />
         <Links />

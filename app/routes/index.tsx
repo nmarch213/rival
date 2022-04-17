@@ -1,7 +1,10 @@
+import ThemeToggle from '~/components/ThemeToggle';
+
 export default function Index() {
   return (
     <div>
       <h1>Welcome to Remix</h1>
+      <ThemeToggle />
       <ul>
         <li>
           <a
