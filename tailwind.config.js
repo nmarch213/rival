@@ -16,7 +16,24 @@ module.exports = {
       Red: '#ff5555',
       Yellow: '#f1fa8c',
     },
-    extend: {},
+    extend: {
+      keyframes: {
+        grow: {
+          '0%': {
+            transform: 'scale(1)',
+          },
+          '50%': {
+            transform: 'scale(1.3)',
+          },
+          '100%': {
+            transform: 'scale(1)',
+          },
+        },
+      },
+      animation: {
+        grow: 'grow 2s linear infinite',
+      },
+    },
   },
   plugins: [],
 };

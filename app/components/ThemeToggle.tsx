@@ -29,12 +29,16 @@ export default function ThemeToggle() {
       onClick={() => {
         handleToggle();
       }}
-      className='text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5'>
+      className=' text-gray-500 dark:text-gray-400 hover:bg-gray-100 hover:animate-grow focus:outline-none rounded-lg text-sm p-2.5'>
       {mode === 'dark' && (
-        <div className='text-black dark:text-Foreground'>D</div>
+        <div className='text-black dark:text-Foreground'>
+          <img src='/assets/sun.svg' alt='moon' className='h-8 w-8' />
+        </div>
       )}
       {mode === 'light' && (
-        <div className='text-black dark:text-Foreground'>L</div>
+        <div className='text-black dark:text-Foreground'>
+          <img src='/assets/moon.svg' alt='moon' className='h-8 w-8' />
+        </div>
       )}
     </button>
   );
