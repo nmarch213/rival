@@ -35,7 +35,7 @@ export default function App() {
         <Links />
       </head>
       <body>
-        <div className='bg-white dark:bg-Background h-screen'>
+        <div className='bg-white dark:bg-Background h-screen w-screen'>
           <Outlet />
           <ScrollRestoration />
           <Scripts />

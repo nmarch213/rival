@@ -23,23 +23,25 @@ export default function ThemeToggle() {
   };
 
   return (
-    <button
-      id='theme-toggle'
-      type='button'
-      onClick={() => {
-        handleToggle();
-      }}
-      className=' text-gray-500 dark:text-gray-400 hover:bg-gray-100 hover:animate-grow focus:outline-none rounded-lg text-sm p-2.5'>
-      {mode === 'dark' && (
-        <div className='text-black dark:text-Foreground'>
-          <img src='/assets/sun.svg' alt='moon' className='h-8 w-8' />
-        </div>
-      )}
-      {mode === 'light' && (
-        <div className='text-black dark:text-Foreground'>
-          <img src='/assets/moon.svg' alt='moon' className='h-8 w-8' />
-        </div>
-      )}
-    </button>
+    <div>
+      <button
+        id='theme-toggle'
+        type='button'
+        onClick={() => {
+          handleToggle();
+        }}
+        className='absolute top-5 right-5 hover:animate-grow'>
+        {mode === 'dark' && (
+          <div className='text-black dark:text-Foreground'>
+            <img src='/assets/sun.svg' alt='moon' className='h-16 w-16' />
+          </div>
+        )}
+        {mode === 'light' && (
+          <div className='text-black dark:text-Foreground'>
+            <img src='/assets/moon.svg' alt='moon' className='h-16 w-16' />
+          </div>
+        )}
+      </button>
+    </div>
   );
 }
