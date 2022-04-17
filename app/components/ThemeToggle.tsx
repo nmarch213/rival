@@ -30,8 +30,12 @@ export default function ThemeToggle() {
         handleToggle();
       }}
       className='text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5'>
-      {mode === 'dark' && <div>D</div>}
-      {mode === 'light' && <div>L</div>}
+      {mode === 'dark' && (
+        <div className='text-black dark:text-Foreground'>D</div>
+      )}
+      {mode === 'light' && (
+        <div className='text-black dark:text-Foreground'>L</div>
+      )}
     </button>
   );
 }
